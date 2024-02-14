@@ -1,7 +1,12 @@
+:root{
+    --font-color:rgb(60, 60, 60);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html, body{
@@ -9,3 +14,63 @@ html, body{
     width: 100%;
 }
 
+#main{
+    width: 100%;
+    height: 100%;
+}
+
+#nav{
+    width: 100%;
+    height: 70px;
+    
+}
+
+.nav-parts{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 20px;
+}
+
+.nav-parts li img{
+    height: 50px;
+    width: 50px;
+}
+
+.nav-parts li a{
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: 600;
+}
+
+.nav-parts li{
+    list-style: none;
+    font-size: medium;
+}
+
+.nav-parts li input{
+    width: 1000px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    padding-left: 10px;
+    background-color: rgb(220, 220, 220);
+    color: var(--font-color);
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    width: 1000px;
+    padding-left: 10px;
+    background-color: rgb(220, 220, 220);
+    color: var(--font-color)
+}
+
+.nav-parts li i{
+    font-size: 25px;
+    color: var(--font-color);
+}
