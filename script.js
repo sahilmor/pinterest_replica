@@ -36,7 +36,24 @@ function showcards(){
     </div>`
     })
 
-    document.querySelector(".main-body").innerHTML=addimage; 
+    document.querySelector(".posts").innerHTML=addimage; 
+
 }
 
 showcards();
+
+function handlesearch(){
+    var searchinput = document.querySelector(".search-bar");
+
+    searchinput.addEventListener("focus", function (){
+        document.querySelector(".main-body").style.opacity = 0.2;
+        document.querySelector(".main-body").style.transition = "0.2s";
+    })
+
+    searchinput.addEventListener("blur", function (){
+        document.querySelector(".main-body").style.opacity = 1;
+        document.querySelector(".main-body").style.transition = "0.2s";
+    })
+}
+
+handlesearch();

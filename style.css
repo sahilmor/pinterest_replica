@@ -50,7 +50,7 @@ html, body{
     font-size: medium;
 }
 
-.nav-parts li input{
+.search-bar{
     width: 1000px;
     height: 40px;
     border: none;
@@ -60,41 +60,149 @@ html, body{
     color: var(--font-color);
 }
 
-.search{
-    display: flex;
-    align-items: center;
-    border-radius: 50px;
-    width: 1000px;
-    padding-left: 10px;
-    background-color: rgb(240, 240, 240);
-    color: var(--font-color)
-}
-
 .nav-parts li i{
     font-size: 25px;
     color: var(--font-color);
 }
 
-.main-body {
+.nav-btn:focus{
+    background-color: black;
+    color: white;
+}
+
+.nav-btn{
+    height: 40px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.posts {
     padding: 2vh;
     width: 100%;
     margin: auto;
     columns: 5;
     column-gap: 20px;
   }
-  .main-body .box {
+  .posts .box {
     width: 100%;
     margin-bottom: 10px;
     break-inside: avoid;
     border-radius: 15px;
   }
-  .main-body .box img {
+  .posts .box img {
     max-width: 100%;
     min-width: 100%;
     border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
   }
   
   img:hover {
-    opacity: 0.95;
+    opacity: 0.85;
+  }
+
+  .posts img:hover{
+    scale: 0.985;
+  }
+
+  @media (max-width: 1520px){
+    .search-bar{
+        width: 900px;
+    }
+  }
+
+  @media (max-width: 1427px) {
+    .posts {
+      columns: 4;
+      width: calc(100% - 40px);
+    }
+
+    .search-bar{
+        width: 800px;
+    }
+  }
+
+  @media (max-width: 1320px){
+    .search-bar{
+        width: 700px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .posts {
+      columns: 3;
+    }
+
+    .search-bar{
+        width: 600px;
+    }
+  }
+
+  @media (max-width: 1120px) {
+    .search-bar{
+        width: 500px;
+    }
   }
   
+  @media (max-width: 1000px) {
+    .posts {
+      columns: 2;
+    }
+
+    .search-bar{
+        width: 400px;
+    }
+  
+    body {
+      overflow-x: hidden;
+    }
+  }
+
+  @media (max-width: 880px){
+    .search-bar{
+        width: 300px;
+    }
+  }
+  
+  @media (max-width: 786px) {
+    .posts {
+      columns: 1;
+    }
+
+    .search-bar{
+        width: 200px;
+    }
+  }
+  
+  @media (max-width: 700px){
+    #hide-btn{
+        display: none;
+        position: absolute;
+    }
+
+    .search-bar{
+        width: 370px;
+        margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 660px){
+    .search-bar{
+        width: 300px;
+    }
+  }
+
+  @media (max-width: 560px){
+    .search-bar{
+        width: 200px;
+    }
+  }
+
+  @media (max-width: 460px){
+    .search-bar{
+        display: none;
+    }
+  }
